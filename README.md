@@ -1,7 +1,7 @@
-# `Сборка Gulp 08.07.2023`
+# `Сборка Gulp`
 
 В сборке есть:
-- TailwindCss (для быстрой работы со стилями)
+- TailwindCss (нужно включить в gulpfile)
 - gulp-scss (для работы с scss)
 - gulp-avif (конвертер картинок в avif)
 - gulp-webp (конвертер картинок в webp)
