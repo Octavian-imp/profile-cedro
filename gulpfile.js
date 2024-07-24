@@ -1,7 +1,7 @@
 const { src, dest, watch, parallel, series } = require("gulp");
 
 //css imports
-const tailwind = require("tailwindcss");
+// const tailwind = require("tailwindcss");
 const postcss = require("gulp-postcss");
 const scss = require("gulp-sass")(require("sass"));
 const autoprefixer = require("gulp-autoprefixer");
@@ -17,7 +17,7 @@ const fonter = require("gulp-fonter");
 const uglify = require("gulp-uglify-es").default;
 const include = require("gulp-file-include");
 const concat = require("gulp-concat");
-const clean = require("gulp-clean");
+const del = require("del");
 //server & cache
 const newer = require("gulp-newer");
 const browserSync = require("browser-sync").create();
@@ -86,7 +86,7 @@ function scripts() {
 //styles
 function styles() {
   return src("app/scss/**/*.scss")
-    .pipe(postcss([tailwind, autoprefixer]))
+    .pipe(postcss([autoprefixer]))
     .pipe(scss({ outputStyle: "compressed" }))
     .pipe(concat("style.min.css"))
     .pipe(dest("app/minify/css"))
@@ -121,10 +121,8 @@ function build() {
   return src(
     [
       "app/minify/css/style.min.css",
-      "app/minify/js/**/*.min.js",
+      "app/minify/js/main.min.js",
       "app/assets/images/dist/*.*",
-      "!app/assets/images/dist/*.svg",
-      "app/assets/images/dist/sprite.svg",
       "app/assets/fonts/dist/*.*",
       "app/*.html",
     ],
@@ -135,7 +133,7 @@ function build() {
 }
 
 function cleanBuild() {
-  return src("build").pipe(clean());
+  return del(["build/*"]);
 }
 
 exports.styles = styles;
@@ -146,6 +144,7 @@ exports.scripts = scripts;
 exports.pages = pages;
 exports.watcher = watcher;
 exports.serve = serve;
+exports.clean = cleanBuild;
 exports.prebuild = series(styles, scripts, pages, images, fonts);
 exports.build = series(cleanBuild, build);
 exports.default = parallel(styles, scripts, pages, serve, watcher);

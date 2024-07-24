@@ -1,5 +1,6 @@
 @@include('../components/header.html', {title: 'hello world'})
-<main class="profilePage">
+<hr class="profilePage_navBlock-divider" />
+<article class="profilePage">
   <aside class="profilePage_navBlock">
     <ul>
       <li>
@@ -13,10 +14,11 @@
       </li>
     </ul>
   </aside>
-  <hr class="profilePage_navBlock-divider" />
+
   <article class="profilePage_content">
     <h1 class="profilePage_title">Профиль</h1>
     <form class="profileForm_container">
+      <hr class="profileForm-divider" />
       <h2 class="profileForm_title">Данные профиля</h2>
       @@loop('../components/formField.html', [{title: 'ФИО', name: 'fullname',
       id:'fullname', placeholder:'', type: 'text'}, {title: 'Почта', name:
@@ -28,7 +30,7 @@
       </button>
     </form>
   </article>
-</main>
+</article>
 <hr class="profilePage_bottom-divider" />
 @@include('../components/trandsSlider.html')
 @@include('../components/footer.html')

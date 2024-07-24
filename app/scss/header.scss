@@ -1,51 +1,111 @@
+@use "./vars.scss";
+
 .header {
   &_container {
-    @apply container py-4 flex items-center justify-between;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: vars.$container-sm) {
+      & {
+        max-width: vars.$container-sm;
+      }
+    }
+    @media (min-width: vars.$container-lg) {
+      & {
+        max-width: vars.$container-lg;
+      }
+    }
   }
 
   &_navBlock {
-    @apply flex items-center gap-8;
-    @media (max-width: theme("screens.xl")) {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    @media (max-width: vars.$container-lg) {
       & {
-        @apply gap-0;
+        gap: 0;
       }
     }
     .navBlock {
       &_contact {
-        @apply font-medium text-sm leading-6 tracking-wide flex items-center gap-[10px];
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.025em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
         &_telNumber {
-          @media (max-width: theme("screens.xl")) {
+          @media (max-width: vars.$container-lg) {
             & {
-              @apply hidden;
+              display: none;
             }
           }
         }
       }
       &_contact,
       &_contact > span,
-      &_favorite,
       &_profile {
-        @apply text-gold;
+        color: vars.$gold;
         &:hover *,
         &:hover {
-          @apply text-dark stroke-dark;
+          color: vars.$dark;
+          stroke: vars.$dark;
         }
       }
       &_actionsList {
-        @apply flex items-center;
-        @media (max-width: theme("screens.xl")) {
+        display: flex;
+        align-items: center;
+        @media (max-width: vars.$container-lg) {
           & {
-            @apply mr-4;
+            margin-right: 1rem;
+          }
+        }
+      }
+      &_favorite {
+        position: relative;
+
+        &:hover > svg * {
+          stroke: vars.$dark;
+        }
+        &_counter {
+          display: none;
+          position: absolute;
+          top: 0;
+          right: -2.5px;
+          background-color: vars.$dark;
+          border-radius: 9999px;
+          -webkit-border-radius: 9999px;
+          -moz-border-radius: 9999px;
+          -ms-border-radius: 9999px;
+          -o-border-radius: 9999px;
+          padding: 3px 2px;
+          color: #fff;
+          font-size: 0.5rem;
+          font-weight: 500;
+          line-height: 1;
+          z-index: 1;
+          &:hover {
+            color: #fff;
+          }
+          &-active {
+            display: inline;
           }
         }
       }
       &_profile {
         &:hover * {
-          @apply fill-dark;
+          fill: vars.$dark;
         }
       }
       &_menuBtn {
-        @apply relative w-6 h-6;
+        position: relative;
+        width: 1.5rem;
+        height: 1.5rem;
         &::before {
           content: "";
           display: block;
@@ -60,12 +120,14 @@
         }
         &::after,
         &::before {
-          @apply w-5 h-[1px] bg-dark;
+          width: 1.25rem;
+          height: 1px;
+          background-color: vars.$dark;
         }
         &:hover {
           &::after,
           &::before {
-            @apply bg-gold;
+            background-color: vars.$gold;
           }
           &::before {
             top: calc(25% - 2px);
@@ -78,6 +140,7 @@
     }
   }
   &_divider {
-    @apply border-t-[1px] border-primary-dark w-full;
+    border-top: 1px solid vars.$gray-dark;
+    width: 100%;
   }
 }

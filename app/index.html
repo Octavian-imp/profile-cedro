@@ -18,11 +18,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <!-- <link
+      rel="stylesheet"
+      href="https://yarnpkg.com/en/package/normalize.css"
+    /> -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.css"
     />
-    <link rel="stylesheet" href="/minify/css/style.min.css" />
+    <link rel="stylesheet" href="./minify/css/style.min.css" />
   </head>
 
   <body>
@@ -37,7 +41,11 @@
     <div class="menuOverlay_nav_container">
       <span class="menuOverlay_nav_title">Продукция</span>
       <ul>
-        <li><a class="menuOverlay_nav_item" href="#">Пигменты</a></li>
+        <li>
+          <a class="menuOverlay_nav_item menuOverlay_nav_item-active" href="#"
+            >Пигменты</a
+          >
+        </li>
         <li><a class="menuOverlay_nav_item" href="#">Пигменты</a></li>
         <li><a class="menuOverlay_nav_item" href="#">Аппараты</a></li>
         <li><a class="menuOverlay_nav_item" href="#">Иглы</a></li>
@@ -78,6 +86,7 @@
         <div class="navBlock_actionsList">
           <button type="button" class="navBlock_favorite">
             <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.92 7.06a3.69 3.69 0 00-1.195-.784 3.74 3.74 0 00-4.015.785l-.71.698-.71-.698A3.718 3.718 0 008.685 6c-.978 0-1.915.38-2.606 1.06A3.59 3.59 0 005 9.62c0 .96.388 1.882 1.08 2.56l.71.698L12 18l5.21-5.12.71-.698c.343-.337.614-.736.8-1.175a3.565 3.565 0 000-2.771 3.617 3.617 0 00-.8-1.175v0z" stroke="#D0BC7A" stroke-width="1.5"/></svg>
+            <span class="navBlock_favorite_counter"></span>
           </button>
           <button type="button" class="navBlock_profile">
             <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.25 9.4c0-1.475 1.22-2.692 2.75-2.692s2.75 1.217 2.75 2.693c0 1.475-1.22 2.692-2.75 2.692s-2.75-1.217-2.75-2.692zM12 5.209c-2.335 0-4.25 1.866-4.25 4.193 0 2.327 1.915 4.192 4.25 4.192s4.25-1.865 4.25-4.192S14.334 5.208 12 5.208zM8.375 18.666a2.692 2.692 0 012.692-2.693h1.865a2.692 2.692 0 012.692 2.693h1.5a4.192 4.192 0 00-4.192-4.193h-1.865a4.192 4.192 0 00-4.192 4.193h1.5z" fill="#D0BC7A"/></svg>
@@ -95,7 +104,8 @@
   </body>
 </html>
 
-<main class="profilePage">
+<hr class="profilePage_navBlock-divider" />
+<article class="profilePage">
   <aside class="profilePage_navBlock">
     <ul>
       <li>
@@ -109,10 +119,11 @@
       </li>
     </ul>
   </aside>
-  <hr class="profilePage_navBlock-divider" />
+
   <article class="profilePage_content">
     <h1 class="profilePage_title">Профиль</h1>
     <form class="profileForm_container">
+      <hr class="profileForm-divider" />
       <h2 class="profileForm_title">Данные профиля</h2>
       <div class="formField_container">
   <label for="fullname" class="formField_Title">ФИО</label>
@@ -151,7 +162,7 @@
       </button>
     </form>
   </article>
-</main>
+</article>
 <hr class="profilePage_bottom-divider" />
 <article class="trands_container">
   <div class="trands_header">
@@ -170,9 +181,9 @@
   <span class="trandItem_discount">скидка</span>
   <div class="trandItem_img_wrapper">
     <picture class="img">
-      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
-      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
-      <img src="/assets/images/dist/trandItem.png" alt="" />
+      <source srcset="./assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="./assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="./assets/images/dist/trandItem.png" alt="" />
     </picture>
   </div>
   <hr class="trandItem_divider" />
@@ -194,9 +205,9 @@
   <span class="trandItem_discount">скидка</span>
   <div class="trandItem_img_wrapper">
     <picture class="img">
-      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
-      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
-      <img src="/assets/images/dist/trandItem.png" alt="" />
+      <source srcset="./assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="./assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="./assets/images/dist/trandItem.png" alt="" />
     </picture>
   </div>
   <hr class="trandItem_divider" />
@@ -218,9 +229,9 @@
   <span class="trandItem_discount">скидка</span>
   <div class="trandItem_img_wrapper">
     <picture class="img">
-      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
-      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
-      <img src="/assets/images/dist/trandItem.png" alt="" />
+      <source srcset="./assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="./assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="./assets/images/dist/trandItem.png" alt="" />
     </picture>
   </div>
   <hr class="trandItem_divider" />
@@ -242,9 +253,9 @@
   <span class="trandItem_discount">скидка</span>
   <div class="trandItem_img_wrapper">
     <picture class="img">
-      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
-      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
-      <img src="/assets/images/dist/trandItem.png" alt="" />
+      <source srcset="./assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="./assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="./assets/images/dist/trandItem.png" alt="" />
     </picture>
   </div>
   <hr class="trandItem_divider" />
@@ -266,9 +277,9 @@
   <span class="trandItem_discount">скидка</span>
   <div class="trandItem_img_wrapper">
     <picture class="img">
-      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
-      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
-      <img src="/assets/images/dist/trandItem.png" alt="" />
+      <source srcset="./assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="./assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="./assets/images/dist/trandItem.png" alt="" />
     </picture>
   </div>
   <hr class="trandItem_divider" />
@@ -290,9 +301,9 @@
   <span class="trandItem_discount">скидка</span>
   <div class="trandItem_img_wrapper">
     <picture class="img">
-      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
-      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
-      <img src="/assets/images/dist/trandItem.png" alt="" />
+      <source srcset="./assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="./assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="./assets/images/dist/trandItem.png" alt="" />
     </picture>
   </div>
   <hr class="trandItem_divider" />
@@ -314,9 +325,9 @@
   <span class="trandItem_discount">скидка</span>
   <div class="trandItem_img_wrapper">
     <picture class="img">
-      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
-      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
-      <img src="/assets/images/dist/trandItem.png" alt="" />
+      <source srcset="./assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="./assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="./assets/images/dist/trandItem.png" alt="" />
     </picture>
   </div>
   <hr class="trandItem_divider" />
@@ -338,9 +349,9 @@
   <span class="trandItem_discount">скидка</span>
   <div class="trandItem_img_wrapper">
     <picture class="img">
-      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
-      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
-      <img src="/assets/images/dist/trandItem.png" alt="" />
+      <source srcset="./assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="./assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="./assets/images/dist/trandItem.png" alt="" />
     </picture>
   </div>
   <hr class="trandItem_divider" />
@@ -365,7 +376,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.js"></script>
-<script src="/minify/js/main.min.js"></script>
+<script src="./minify/js/main.min.js"></script>
 </body>
 
 </html>

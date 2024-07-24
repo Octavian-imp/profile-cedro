@@ -1,58 +1,93 @@
+@use "./vars.scss";
+
 .trands {
   &_container {
-    @apply flex flex-col justify-center container gap-8;
-    @media (max-width: theme("screens.xl")) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 2rem;
+    @media (min-width: vars.$container-sm) {
       & {
-        @apply mb-8;
+        max-width: vars.$container-sm;
+      }
+    }
+    @media (min-width: vars.$container-lg) {
+      & {
+        max-width: vars.$container-lg;
+      }
+    }
+
+    @media (max-width: vars.$container-lg) {
+      & {
+        margin-bottom: 2rem;
       }
     }
     .trands {
       &_header {
-        @apply flex items-center justify-between mx-11;
-        @media (max-width: theme("screens.xl")) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 2.75rem;
+        @media (max-width: vars.$container-lg) {
           & {
-            @apply mx-0;
+            margin: 0;
           }
           .trands_linkCatalog {
-            @apply hidden;
+            display: none;
           }
         }
       }
       &_title {
-        @apply text-gold uppercase text-5xl font-medium;
+        color: vars.$gold;
+        text-transform: uppercase;
+        font-size: 3rem;
+        line-height: 1;
+        font-weight: 500;
         span {
-          @apply text-dark;
+          color: vars.$dark;
         }
-        @media (max-width: theme("screens.xl")) {
+        @media (max-width: vars.$container-lg) {
           & {
-            @apply text-[28px] leading-8;
+            font-size: 28px;
+            line-height: 2rem;
           }
         }
       }
       &_linkCatalog {
-        @apply flex items-center gap-2 font-medium text-base;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
         &:hover,
         &:hover svg * {
-          @apply text-gold stroke-gold;
+          color: vars.$gold;
+          stroke: vars.$gold;
         }
       }
     }
 
-    @media (min-width: theme("screens.xl")) {
+    @media (min-width: vars.$container-lg) {
       & > .trands_linkCatalog {
-        @apply hidden;
+        display: none;
       }
     }
   }
   &Slider_container {
     width: calc(100% - 1rem);
-    @apply mb-28 mx-11;
+    margin-bottom: 7rem;
+    margin-left: 2.75rem;
+    margin-right: 2.75rem;
     .swiper-wrapper > .swiper-slide {
-      @apply max-w-64;
+      max-width: 16rem;
     }
-    @media (max-width: theme("screens.xl")) {
+    @media (max-width: vars.$container-lg) {
       & {
-        @apply mb-0 mx-0;
+        margin: 0;
       }
     }
   }
@@ -60,45 +95,101 @@
 
 .trandItem {
   &_container {
-    @apply flex flex-col relative bg-gray rounded-lg;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: vars.$gray;
+    border: 1px solid transparent;
+    &:hover {
+      border: 1px solid vars.$border-dark;
+      .trandItem_title {
+        color: vars.$gold;
+      }
+    }
     .trandItem {
       &_favoriteBtn {
-        @apply absolute right-6 top-[26px] z-[1];
-        &:hover svg > * {
-          @apply fill-dark opacity-40;
+        position: absolute;
+        right: 1.5rem;
+        top: 26px;
+        z-index: 1;
+        & :where(svg, svg *) {
+          pointer-events: none;
         }
-        &:active svg > * {
-          @apply fill-gold;
+        &:hover svg > * {
+          fill: vars.$dark;
+          opacity: 0.4;
+        }
+        :where(&-active, &:active) svg > * {
+          fill: vars.$gold;
         }
       }
       &_discount {
-        @apply pt-1 pb-2 px-3 bg-danger text-white absolute top-6 left-6 rounded-full;
+        padding: 0.25rem 0.75rem 0.5rem 0.75rem;
+        background-color: vars.$danger;
+        color: #fff;
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        border-radius: 9999px;
+        -webkit-border-radius: 9999px;
+        -moz-border-radius: 9999px;
+        -ms-border-radius: 9999px;
+        -o-border-radius: 9999px;
       }
       &_img_wrapper {
         .img {
-          @apply flex items-center justify-center h-64 select-none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 16rem;
+          user-select: none;
         }
       }
       &_divider {
-        @apply h-3 w-full border-0 bg-orange-light;
+        height: 0.75rem;
+        width: 100%;
+        border: none;
+        background-color: vars.$orange-light;
       }
       &_header {
-        @apply m-6 gap-3 flex flex-col justify-center;
+        margin: 1.5rem;
+        gap: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
       &_title {
-        @apply font-times font-bold italic text-lg leading-none;
+        font-family: vars.$font-times;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 1.125rem;
+        line-height: 1;
       }
       &_description,
       &_weight {
-        @apply text-sm text-dark text-opacity-80 leading-[18px];
+        font-size: 0.875rem;
+        line-height: 18px;
+        color: vars.$dark-80;
       }
       &_amount {
-        @apply font-times font-bold italic text-lg leading-none flex items-center gap-2;
+        font-family: vars.$font-times;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 1.125rem;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
         &_sale {
-          @apply text-dark;
+          color: vars.$dark;
         }
         &_del {
-          @apply text-dark text-opacity-40;
+          color: vars.$dark-40;
         }
       }
     }
