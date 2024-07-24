@@ -1,0 +1,83 @@
+.header {
+  &_container {
+    @apply container py-4 flex items-center justify-between;
+  }
+
+  &_navBlock {
+    @apply flex items-center gap-8;
+    @media (max-width: theme("screens.xl")) {
+      & {
+        @apply gap-0;
+      }
+    }
+    .navBlock {
+      &_contact {
+        @apply font-medium text-sm leading-6 tracking-wide flex items-center gap-[10px];
+        &_telNumber {
+          @media (max-width: theme("screens.xl")) {
+            & {
+              @apply hidden;
+            }
+          }
+        }
+      }
+      &_contact,
+      &_contact > span,
+      &_favorite,
+      &_profile {
+        @apply text-gold;
+        &:hover *,
+        &:hover {
+          @apply text-dark stroke-dark;
+        }
+      }
+      &_actionsList {
+        @apply flex items-center;
+        @media (max-width: theme("screens.xl")) {
+          & {
+            @apply mr-4;
+          }
+        }
+      }
+      &_profile {
+        &:hover * {
+          @apply fill-dark;
+        }
+      }
+      &_menuBtn {
+        @apply relative w-6 h-6;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 25%;
+        }
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+        }
+        &::after,
+        &::before {
+          @apply w-5 h-[1px] bg-dark;
+        }
+        &:hover {
+          &::after,
+          &::before {
+            @apply bg-gold;
+          }
+          &::before {
+            top: calc(25% - 2px);
+          }
+          &::after {
+            top: calc(50% + 2px);
+          }
+        }
+      }
+    }
+  }
+  &_divider {
+    @apply border-t-[1px] border-primary-dark w-full;
+  }
+}

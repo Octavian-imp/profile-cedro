@@ -1,0 +1,106 @@
+.trands {
+  &_container {
+    @apply flex flex-col justify-center container gap-8;
+    @media (max-width: theme("screens.xl")) {
+      & {
+        @apply mb-8;
+      }
+    }
+    .trands {
+      &_header {
+        @apply flex items-center justify-between mx-11;
+        @media (max-width: theme("screens.xl")) {
+          & {
+            @apply mx-0;
+          }
+          .trands_linkCatalog {
+            @apply hidden;
+          }
+        }
+      }
+      &_title {
+        @apply text-gold uppercase text-5xl font-medium;
+        span {
+          @apply text-dark;
+        }
+        @media (max-width: theme("screens.xl")) {
+          & {
+            @apply text-[28px] leading-8;
+          }
+        }
+      }
+      &_linkCatalog {
+        @apply flex items-center gap-2 font-medium text-base;
+        &:hover,
+        &:hover svg * {
+          @apply text-gold stroke-gold;
+        }
+      }
+    }
+
+    @media (min-width: theme("screens.xl")) {
+      & > .trands_linkCatalog {
+        @apply hidden;
+      }
+    }
+  }
+  &Slider_container {
+    width: calc(100% - 1rem);
+    @apply mb-28 mx-11;
+    .swiper-wrapper > .swiper-slide {
+      @apply max-w-64;
+    }
+    @media (max-width: theme("screens.xl")) {
+      & {
+        @apply mb-0 mx-0;
+      }
+    }
+  }
+}
+
+.trandItem {
+  &_container {
+    @apply flex flex-col relative bg-gray rounded-lg;
+    .trandItem {
+      &_favoriteBtn {
+        @apply absolute right-6 top-[26px] z-[1];
+        &:hover svg > * {
+          @apply fill-dark opacity-40;
+        }
+        &:active svg > * {
+          @apply fill-gold;
+        }
+      }
+      &_discount {
+        @apply pt-1 pb-2 px-3 bg-danger text-white absolute top-6 left-6 rounded-full;
+      }
+      &_img_wrapper {
+        .img {
+          @apply flex items-center justify-center h-64 select-none;
+        }
+      }
+      &_divider {
+        @apply h-3 w-full border-0 bg-orange-light;
+      }
+      &_header {
+        @apply m-6 gap-3 flex flex-col justify-center;
+      }
+      &_title {
+        @apply font-times font-bold italic text-lg leading-none;
+      }
+      &_description,
+      &_weight {
+        @apply text-sm text-dark text-opacity-80 leading-[18px];
+      }
+      &_amount {
+        @apply font-times font-bold italic text-lg leading-none flex items-center gap-2;
+        &_sale {
+          @apply text-dark;
+        }
+        &_del {
+          @apply text-dark text-opacity-40;
+        }
+      }
+    }
+  }
+}

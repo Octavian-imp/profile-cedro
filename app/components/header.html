@@ -1,31 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
     <title>@@title</title>
     <script type="module">
-        document.documentElement.classList.remove('no-js');
-        document.documentElement.classList.add('js');
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
     </script>
-    <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
-    <meta property="og:title" content="Home - Page"> <!-- TODO: update og:title -->
-    <meta property="og:url" content="https://www.example.com/page"> <!-- TODO: update og:url -->
-    <meta property="og:description" content="OG Page Description"> <!-- TODO: update og:description -->
-    <meta property="og:image" content="/path/to/image"> <!-- TODO: og:image -->
-    <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:cared -->
-    <link rel="canonical" href="https://www.example.com/page"> <!-- TODO: update canonical link -->
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest"> <!-- TODO: update web app manifest file -->
-    <meta name="theme-color" content="#FF00FF"> <!-- TODO: update meta theme color -->
-    <link rel="stylesheet" href="/minify/css/style.min.css"> <!-- TODO: Update styles -->
-</head>
+    <meta name="description" content="Page Description" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.css"
+    />
+    <link rel="stylesheet" href="/minify/css/style.min.css" />
+  </head>
 
-<body>
-    <header>header</header>
+  <body>
+    @@include('./menuOverlay.html')
+
+    <header class="header_container">
+      <a href="#" class="header_logo">
+        @@include('../assets/images/dist/logo.svg')
+      </a>
+      <div class="header_navBlock">
+        <a href="tel:+78005553535" class="navBlock_contact">
+          @@include('../assets/images/dist/call.svg')
+          <span class="navBlock_contact_telNumber"> 8 (800) 555-35-35 </span>
+        </a>
+        <div class="navBlock_actionsList">
+          <button type="button" class="navBlock_favorite">
+            @@include('../assets/images/dist/heart.svg')
+          </button>
+          <button type="button" class="navBlock_profile">
+            @@include('../assets/images/dist/user.svg')
+          </button>
+        </div>
+        <button
+          type="button"
+          class="navBlock_menuBtn"
+          id="menuOverlay"
+        ></button>
+      </div>
+    </header>
+
+    <hr class="header_divider" />
+  </body>
+</html>

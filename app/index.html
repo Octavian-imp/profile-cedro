@@ -1,39 +1,370 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
     <title>hello world</title>
     <script type="module">
-        document.documentElement.classList.remove('no-js');
-        document.documentElement.classList.add('js');
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
     </script>
-    <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
-    <meta property="og:title" content="Home - Page"> <!-- TODO: update og:title -->
-    <meta property="og:url" content="https://www.example.com/page"> <!-- TODO: update og:url -->
-    <meta property="og:description" content="OG Page Description"> <!-- TODO: update og:description -->
-    <meta property="og:image" content="/path/to/image"> <!-- TODO: og:image -->
-    <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:cared -->
-    <link rel="canonical" href="https://www.example.com/page"> <!-- TODO: update canonical link -->
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest"> <!-- TODO: update web app manifest file -->
-    <meta name="theme-color" content="#FF00FF"> <!-- TODO: update meta theme color -->
-    <link rel="stylesheet" href="/minify/css/style.min.css"> <!-- TODO: Update styles -->
-</head>
+    <meta name="description" content="Page Description" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.css"
+    />
+    <link rel="stylesheet" href="/minify/css/style.min.css" />
+  </head>
 
-<body>
-    <header>header</header>
-<main>
-    test gulp build
+  <body>
+    <div class="menuOverlay_container">
+  <div class="menuOverlay_header">
+    <a class="menuOverlay_header_logo"
+      ><svg width="81" height="14" class="logo" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M70.337 0h2.806c4.104 0 7.12 2.999 7.12 7 0 4-3.02 6.998-7.12 6.998h-2.806c-4.108 0-7.135-3-7.135-6.998s3.027-7 7.135-7zm0 11.866h2.806c2.793 0 4.864-2.082 4.864-4.871 0-2.79-2.076-4.871-4.864-4.871h-2.806c-2.797 0-4.881 2.1-4.881 4.87 0 2.772 2.089 4.872 4.88 4.872zm-56.302-3.1c-.605 1.915-2.206 3.077-4.273 3.077h-2.81c-2.707 0-4.694-2.024-4.694-4.838s1.987-4.849 4.694-4.849h2.81c2.002 0 3.58 1.085 4.23 2.884h2.244C15.526 2.002 12.963.015 9.762.015h-2.81C2.952.015 0 2.97 0 7.005s2.951 6.981 6.952 6.981h2.81c3.254 0 5.82-2.042 6.521-5.216l-2.248-.004zm6.808 2.89V7.878h7.94v-2.03h-7.94V2.324h8.441V.254H18.622v13.491h10.874v-2.09h-8.653zM32.17.254h7.58c3.977 0 6.854 2.829 6.854 6.742s-2.882 6.75-6.853 6.75h-7.58V.253zm2.221 11.426h5.293c2.732 0 4.652-1.958 4.652-4.684 0-2.727-1.92-4.675-4.652-4.675h-5.293v9.359zm24.2-3.24a4.09 4.09 0 002.75-3.918c0-2.487-1.935-4.268-4.54-4.268h-8.077v13.491h2.221V8.752h5.37l2.904 4.993h2.492l-3.12-5.304zm-1.92-1.758h-5.726V2.324h5.726c1.464 0 2.411.927 2.411 2.18 0 1.251-.94 2.178-2.411 2.178z" fill="#D0BC7A"/></svg></a
+    >
+    <button type="button" class="menuOverlay_header_closeBtn"></button>
+  </div>
+  <div class="menuOverlay_content">
+    <div class="menuOverlay_nav_container">
+      <span class="menuOverlay_nav_title">Продукция</span>
+      <ul>
+        <li><a class="menuOverlay_nav_item" href="#">Пигменты</a></li>
+        <li><a class="menuOverlay_nav_item" href="#">Пигменты</a></li>
+        <li><a class="menuOverlay_nav_item" href="#">Аппараты</a></li>
+        <li><a class="menuOverlay_nav_item" href="#">Иглы</a></li>
+        <li>
+          <a class="menuOverlay_nav_item" href="#">Расходные материалы</a>
+        </li>
+      </ul>
+    </div>
+    <div class="menuOverlay_nav_container">
+      <span class="menuOverlay_nav_title">Компания</span>
+      <ul>
+        <li><a class="menuOverlay_nav_item" href="#">Блог</a></li>
+        <li><a class="menuOverlay_nav_item" href="#">Обучение</a></li>
+        <li>
+          <a class="menuOverlay_nav_item" href="#">Стать представителем</a>
+        </li>
+        <li><a class="menuOverlay_nav_item" href="#">Контакты</a></li>
+        <li>
+          <a class="menuOverlay_nav_item" href="#"
+            >Политика конфиденциальности</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+    <header class="header_container">
+      <a href="#" class="header_logo">
+        <svg width="81" height="14" class="logo" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M70.337 0h2.806c4.104 0 7.12 2.999 7.12 7 0 4-3.02 6.998-7.12 6.998h-2.806c-4.108 0-7.135-3-7.135-6.998s3.027-7 7.135-7zm0 11.866h2.806c2.793 0 4.864-2.082 4.864-4.871 0-2.79-2.076-4.871-4.864-4.871h-2.806c-2.797 0-4.881 2.1-4.881 4.87 0 2.772 2.089 4.872 4.88 4.872zm-56.302-3.1c-.605 1.915-2.206 3.077-4.273 3.077h-2.81c-2.707 0-4.694-2.024-4.694-4.838s1.987-4.849 4.694-4.849h2.81c2.002 0 3.58 1.085 4.23 2.884h2.244C15.526 2.002 12.963.015 9.762.015h-2.81C2.952.015 0 2.97 0 7.005s2.951 6.981 6.952 6.981h2.81c3.254 0 5.82-2.042 6.521-5.216l-2.248-.004zm6.808 2.89V7.878h7.94v-2.03h-7.94V2.324h8.441V.254H18.622v13.491h10.874v-2.09h-8.653zM32.17.254h7.58c3.977 0 6.854 2.829 6.854 6.742s-2.882 6.75-6.853 6.75h-7.58V.253zm2.221 11.426h5.293c2.732 0 4.652-1.958 4.652-4.684 0-2.727-1.92-4.675-4.652-4.675h-5.293v9.359zm24.2-3.24a4.09 4.09 0 002.75-3.918c0-2.487-1.935-4.268-4.54-4.268h-8.077v13.491h2.221V8.752h5.37l2.904 4.993h2.492l-3.12-5.304zm-1.92-1.758h-5.726V2.324h5.726c1.464 0 2.411.927 2.411 2.18 0 1.251-.94 2.178-2.411 2.178z" fill="#D0BC7A"/></svg>
+      </a>
+      <div class="header_navBlock">
+        <a href="tel:+78005553535" class="navBlock_contact">
+          <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.664 6H6.158s-.355 2.743 0 4.44c.441 2.11.944 3.412 2.467 4.935 1.523 1.523 2.825 2.026 4.934 2.467 1.698.355 4.441 0 4.441 0v-2.506a2 2 0 00-1.367-1.897l-1.124-.374a.68.68 0 00-.763.242 1.702 1.702 0 01-2.643.122l-1.438-1.618a1.829 1.829 0 01.096-2.53.732.732 0 00.185-.758l-.385-1.155A2 2 0 008.664 6z" stroke="#D0BC7A" stroke-width="1.5"/></svg>
+          <span class="navBlock_contact_telNumber"> 8 (800) 555-35-35 </span>
+        </a>
+        <div class="navBlock_actionsList">
+          <button type="button" class="navBlock_favorite">
+            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.92 7.06a3.69 3.69 0 00-1.195-.784 3.74 3.74 0 00-4.015.785l-.71.698-.71-.698A3.718 3.718 0 008.685 6c-.978 0-1.915.38-2.606 1.06A3.59 3.59 0 005 9.62c0 .96.388 1.882 1.08 2.56l.71.698L12 18l5.21-5.12.71-.698c.343-.337.614-.736.8-1.175a3.565 3.565 0 000-2.771 3.617 3.617 0 00-.8-1.175v0z" stroke="#D0BC7A" stroke-width="1.5"/></svg>
+          </button>
+          <button type="button" class="navBlock_profile">
+            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.25 9.4c0-1.475 1.22-2.692 2.75-2.692s2.75 1.217 2.75 2.693c0 1.475-1.22 2.692-2.75 2.692s-2.75-1.217-2.75-2.692zM12 5.209c-2.335 0-4.25 1.866-4.25 4.193 0 2.327 1.915 4.192 4.25 4.192s4.25-1.865 4.25-4.192S14.334 5.208 12 5.208zM8.375 18.666a2.692 2.692 0 012.692-2.693h1.865a2.692 2.692 0 012.692 2.693h1.5a4.192 4.192 0 00-4.192-4.193h-1.865a4.192 4.192 0 00-4.192 4.193h1.5z" fill="#D0BC7A"/></svg>
+          </button>
+        </div>
+        <button
+          type="button"
+          class="navBlock_menuBtn"
+          id="menuOverlay"
+        ></button>
+      </div>
+    </header>
+
+    <hr class="header_divider" />
+  </body>
+</html>
+
+<main class="profilePage">
+  <aside class="profilePage_navBlock">
+    <ul>
+      <li>
+        <a href="#" class="navBlock_link navBlock_link-active">Профиль</a>
+      </li>
+      <li>
+        <a href="#" class="navBlock_link">Мои заказы </a>
+      </li>
+      <li>
+        <a href="#" class="navBlock_link">Выход</a>
+      </li>
+    </ul>
+  </aside>
+  <hr class="profilePage_navBlock-divider" />
+  <article class="profilePage_content">
+    <h1 class="profilePage_title">Профиль</h1>
+    <form class="profileForm_container">
+      <h2 class="profileForm_title">Данные профиля</h2>
+      <div class="formField_container">
+  <label for="fullname" class="formField_Title">ФИО</label>
+  <input
+    type="text"
+    class="formField_input"
+    name="fullname"
+    id="fullname"
+    placeholder=""
+  />
+</div>
+<div class="formField_container">
+  <label for="email" class="formField_Title">Почта</label>
+  <input
+    type="email"
+    class="formField_input"
+    name="email"
+    id="email"
+    placeholder=""
+  />
+</div>
+<div class="formField_container">
+  <label for="telNumber" class="formField_Title">Телефон</label>
+  <input
+    type="tel"
+    class="formField_input"
+    name="telNumber"
+    id="telNumber"
+    placeholder=""
+  />
+</div>
+
+      <hr class="profileForm-divider" />
+      <button type="button" class="profileForm_submit">
+        Сохранить изменения
+      </button>
+    </form>
+  </article>
 </main>
-<footer>footer</footer>
+<hr class="profilePage_bottom-divider" />
+<article class="trands_container">
+  <div class="trands_header">
+    <h3 class="trands_title">Тренды <span>сезона</span></h3>
+    <a href="#" class="trands_linkCatalog"
+      >Перейти в каталог
+      <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x=".75" y=".75" width="14.5" height="14.5" rx="7.25" stroke="#21242E" stroke-width="1.5"/><path d="M7.245 11l3-3-3-3" stroke="#21242E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a
+    >
+  </div>
+  <div class="trandsSlider_container swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><article class="trandItem_container">
+  <button type="button" class="trandItem_favoriteBtn">
+    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.84 3c-1.747 0-3.278.779-4.429 2.253-.153.196-.29.393-.411.583a7.445 7.445 0 00-.411-.583C10.439 3.779 8.907 3 7.16 3 3.86 3 1.5 5.763 1.5 9.079c0 3.79 3.107 7.364 10.075 11.585a.82.82 0 00.85 0C19.393 16.443 22.5 12.87 22.5 9.079 22.5 5.765 20.142 3 16.84 3z" fill="#E4E4E4"/></svg>
+  </button>
+  <span class="trandItem_discount">скидка</span>
+  <div class="trandItem_img_wrapper">
+    <picture class="img">
+      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="/assets/images/dist/trandItem.png" alt="" />
+    </picture>
+  </div>
+  <hr class="trandItem_divider" />
+  <div class="trandItem_header">
+    <span class="trandItem_title">Brown to blonde</span>
+    <span class="trandItem_description">Пигмент для бровей</span>
+    <span class="trandItem_weight">12 ml.</span>
+    <div class="trandItem_amount">
+      <span class="trandItem_amount_sale">1 500 ₽</span>
+      <s class="trandItem_amount_del">3 000 ₽</s>
+    </div>
+  </div>
+</article>
+</div>
+      <div class="swiper-slide"><article class="trandItem_container">
+  <button type="button" class="trandItem_favoriteBtn">
+    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.84 3c-1.747 0-3.278.779-4.429 2.253-.153.196-.29.393-.411.583a7.445 7.445 0 00-.411-.583C10.439 3.779 8.907 3 7.16 3 3.86 3 1.5 5.763 1.5 9.079c0 3.79 3.107 7.364 10.075 11.585a.82.82 0 00.85 0C19.393 16.443 22.5 12.87 22.5 9.079 22.5 5.765 20.142 3 16.84 3z" fill="#E4E4E4"/></svg>
+  </button>
+  <span class="trandItem_discount">скидка</span>
+  <div class="trandItem_img_wrapper">
+    <picture class="img">
+      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="/assets/images/dist/trandItem.png" alt="" />
+    </picture>
+  </div>
+  <hr class="trandItem_divider" />
+  <div class="trandItem_header">
+    <span class="trandItem_title">Brown to blonde</span>
+    <span class="trandItem_description">Пигмент для бровей</span>
+    <span class="trandItem_weight">12 ml.</span>
+    <div class="trandItem_amount">
+      <span class="trandItem_amount_sale">1 500 ₽</span>
+      <s class="trandItem_amount_del">3 000 ₽</s>
+    </div>
+  </div>
+</article>
+</div>
+      <div class="swiper-slide"><article class="trandItem_container">
+  <button type="button" class="trandItem_favoriteBtn">
+    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.84 3c-1.747 0-3.278.779-4.429 2.253-.153.196-.29.393-.411.583a7.445 7.445 0 00-.411-.583C10.439 3.779 8.907 3 7.16 3 3.86 3 1.5 5.763 1.5 9.079c0 3.79 3.107 7.364 10.075 11.585a.82.82 0 00.85 0C19.393 16.443 22.5 12.87 22.5 9.079 22.5 5.765 20.142 3 16.84 3z" fill="#E4E4E4"/></svg>
+  </button>
+  <span class="trandItem_discount">скидка</span>
+  <div class="trandItem_img_wrapper">
+    <picture class="img">
+      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="/assets/images/dist/trandItem.png" alt="" />
+    </picture>
+  </div>
+  <hr class="trandItem_divider" />
+  <div class="trandItem_header">
+    <span class="trandItem_title">Brown to blonde</span>
+    <span class="trandItem_description">Пигмент для бровей</span>
+    <span class="trandItem_weight">12 ml.</span>
+    <div class="trandItem_amount">
+      <span class="trandItem_amount_sale">1 500 ₽</span>
+      <s class="trandItem_amount_del">3 000 ₽</s>
+    </div>
+  </div>
+</article>
+</div>
+      <div class="swiper-slide"><article class="trandItem_container">
+  <button type="button" class="trandItem_favoriteBtn">
+    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.84 3c-1.747 0-3.278.779-4.429 2.253-.153.196-.29.393-.411.583a7.445 7.445 0 00-.411-.583C10.439 3.779 8.907 3 7.16 3 3.86 3 1.5 5.763 1.5 9.079c0 3.79 3.107 7.364 10.075 11.585a.82.82 0 00.85 0C19.393 16.443 22.5 12.87 22.5 9.079 22.5 5.765 20.142 3 16.84 3z" fill="#E4E4E4"/></svg>
+  </button>
+  <span class="trandItem_discount">скидка</span>
+  <div class="trandItem_img_wrapper">
+    <picture class="img">
+      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="/assets/images/dist/trandItem.png" alt="" />
+    </picture>
+  </div>
+  <hr class="trandItem_divider" />
+  <div class="trandItem_header">
+    <span class="trandItem_title">Brown to blonde</span>
+    <span class="trandItem_description">Пигмент для бровей</span>
+    <span class="trandItem_weight">12 ml.</span>
+    <div class="trandItem_amount">
+      <span class="trandItem_amount_sale">1 500 ₽</span>
+      <s class="trandItem_amount_del">3 000 ₽</s>
+    </div>
+  </div>
+</article>
+</div>
+      <div class="swiper-slide"><article class="trandItem_container">
+  <button type="button" class="trandItem_favoriteBtn">
+    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.84 3c-1.747 0-3.278.779-4.429 2.253-.153.196-.29.393-.411.583a7.445 7.445 0 00-.411-.583C10.439 3.779 8.907 3 7.16 3 3.86 3 1.5 5.763 1.5 9.079c0 3.79 3.107 7.364 10.075 11.585a.82.82 0 00.85 0C19.393 16.443 22.5 12.87 22.5 9.079 22.5 5.765 20.142 3 16.84 3z" fill="#E4E4E4"/></svg>
+  </button>
+  <span class="trandItem_discount">скидка</span>
+  <div class="trandItem_img_wrapper">
+    <picture class="img">
+      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="/assets/images/dist/trandItem.png" alt="" />
+    </picture>
+  </div>
+  <hr class="trandItem_divider" />
+  <div class="trandItem_header">
+    <span class="trandItem_title">Brown to blonde</span>
+    <span class="trandItem_description">Пигмент для бровей</span>
+    <span class="trandItem_weight">12 ml.</span>
+    <div class="trandItem_amount">
+      <span class="trandItem_amount_sale">1 500 ₽</span>
+      <s class="trandItem_amount_del">3 000 ₽</s>
+    </div>
+  </div>
+</article>
+</div>
+      <div class="swiper-slide"><article class="trandItem_container">
+  <button type="button" class="trandItem_favoriteBtn">
+    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.84 3c-1.747 0-3.278.779-4.429 2.253-.153.196-.29.393-.411.583a7.445 7.445 0 00-.411-.583C10.439 3.779 8.907 3 7.16 3 3.86 3 1.5 5.763 1.5 9.079c0 3.79 3.107 7.364 10.075 11.585a.82.82 0 00.85 0C19.393 16.443 22.5 12.87 22.5 9.079 22.5 5.765 20.142 3 16.84 3z" fill="#E4E4E4"/></svg>
+  </button>
+  <span class="trandItem_discount">скидка</span>
+  <div class="trandItem_img_wrapper">
+    <picture class="img">
+      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="/assets/images/dist/trandItem.png" alt="" />
+    </picture>
+  </div>
+  <hr class="trandItem_divider" />
+  <div class="trandItem_header">
+    <span class="trandItem_title">Brown to blonde</span>
+    <span class="trandItem_description">Пигмент для бровей</span>
+    <span class="trandItem_weight">12 ml.</span>
+    <div class="trandItem_amount">
+      <span class="trandItem_amount_sale">1 500 ₽</span>
+      <s class="trandItem_amount_del">3 000 ₽</s>
+    </div>
+  </div>
+</article>
+</div>
+      <div class="swiper-slide"><article class="trandItem_container">
+  <button type="button" class="trandItem_favoriteBtn">
+    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.84 3c-1.747 0-3.278.779-4.429 2.253-.153.196-.29.393-.411.583a7.445 7.445 0 00-.411-.583C10.439 3.779 8.907 3 7.16 3 3.86 3 1.5 5.763 1.5 9.079c0 3.79 3.107 7.364 10.075 11.585a.82.82 0 00.85 0C19.393 16.443 22.5 12.87 22.5 9.079 22.5 5.765 20.142 3 16.84 3z" fill="#E4E4E4"/></svg>
+  </button>
+  <span class="trandItem_discount">скидка</span>
+  <div class="trandItem_img_wrapper">
+    <picture class="img">
+      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="/assets/images/dist/trandItem.png" alt="" />
+    </picture>
+  </div>
+  <hr class="trandItem_divider" />
+  <div class="trandItem_header">
+    <span class="trandItem_title">Brown to blonde</span>
+    <span class="trandItem_description">Пигмент для бровей</span>
+    <span class="trandItem_weight">12 ml.</span>
+    <div class="trandItem_amount">
+      <span class="trandItem_amount_sale">1 500 ₽</span>
+      <s class="trandItem_amount_del">3 000 ₽</s>
+    </div>
+  </div>
+</article>
+</div>
+      <div class="swiper-slide"><article class="trandItem_container">
+  <button type="button" class="trandItem_favoriteBtn">
+    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.84 3c-1.747 0-3.278.779-4.429 2.253-.153.196-.29.393-.411.583a7.445 7.445 0 00-.411-.583C10.439 3.779 8.907 3 7.16 3 3.86 3 1.5 5.763 1.5 9.079c0 3.79 3.107 7.364 10.075 11.585a.82.82 0 00.85 0C19.393 16.443 22.5 12.87 22.5 9.079 22.5 5.765 20.142 3 16.84 3z" fill="#E4E4E4"/></svg>
+  </button>
+  <span class="trandItem_discount">скидка</span>
+  <div class="trandItem_img_wrapper">
+    <picture class="img">
+      <source srcset="/assets/images/dist/trandItem.avif" type="image/avif" />
+      <source srcset="/assets/images/dist/trandItem.webp" type="image/webp" />
+      <img src="/assets/images/dist/trandItem.png" alt="" />
+    </picture>
+  </div>
+  <hr class="trandItem_divider" />
+  <div class="trandItem_header">
+    <span class="trandItem_title">Brown to blonde</span>
+    <span class="trandItem_description">Пигмент для бровей</span>
+    <span class="trandItem_weight">12 ml.</span>
+    <div class="trandItem_amount">
+      <span class="trandItem_amount_sale">1 500 ₽</span>
+      <s class="trandItem_amount_del">3 000 ₽</s>
+    </div>
+  </div>
+</article>
+</div>
+    </div>
+  </div>
+  <a href="#" class="trands_linkCatalog"
+    >Перейти в каталог
+    <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x=".75" y=".75" width="14.5" height="14.5" rx="7.25" stroke="#21242E" stroke-width="1.5"/><path d="M7.245 11l3-3-3-3" stroke="#21242E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a
+  >
+</article>
 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.js"></script>
 <script src="/minify/js/main.min.js"></script>
 </body>
 

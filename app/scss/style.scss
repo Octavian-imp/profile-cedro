@@ -1,3 +1,194 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-dark text-white rounded-xs py-4 px-8 font-roboto font-medium text-base text-center;
+    &:hover {
+      @apply bg-gold;
+    }
+    &:active {
+      @apply bg-gold bg-opacity-50;
+    }
+  }
+  .input-primary {
+    @apply bg-gray p-4 rounded-xs text-base text-dark backdrop:blur-sm border border-solid border-transparent;
+    &::placeholder {
+      @apply text-dark text-opacity-40 font-roboto font-normal;
+    }
+    &:hover {
+      &::placeholder {
+        @apply text-opacity-80;
+      }
+    }
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      @apply border-black;
+    }
+  }
+}
+
+*,
+*:after,
+*:before,
+*::placeholder {
+  @apply duration-200 text-dark;
+}
+
+body {
+  @apply font-roboto font-normal overflow-x-hidden;
+}
+
+svg.logo {
+  &:hover {
+    @apply opacity-75;
+  }
+}
+
+.formField {
+  &_container {
+    @apply flex flex-col gap-3;
+    @media (max-width: theme("screens.xl")) {
+      & {
+        @apply gap-0;
+      }
+    }
+    .formField {
+      &_Title {
+        @apply text-dark text-opacity-40;
+      }
+      &_input {
+        @extend .input-primary;
+      }
+    }
+  }
+}
+
+.profilePage {
+  @apply flex container relative;
+  @media (max-width: theme("screens.xl")) {
+    & {
+      position: initial;
+      @apply flex-col;
+    }
+  }
+  &_navBlock {
+    @apply border-r border-primary-dark;
+    @media (max-width: theme("screens.xl")) {
+      & {
+        @apply border-r-0;
+      }
+    }
+    & > ul {
+      list-style-type: none;
+      @apply flex flex-col gap-3 ml-11 mr-8 mt-28;
+      @media (max-width: theme("screens.xl")) {
+        & {
+          @apply mt-2 flex-row gap-4 mx-0;
+          li:last-child {
+            @apply ml-auto;
+          }
+        }
+      }
+      li {
+        @apply uppercase font-medium text-sm leading-6 tracking-wide;
+        .navBlock_link {
+          &-active {
+            @apply text-gold;
+          }
+        }
+      }
+    }
+    &-divider {
+      @apply hidden;
+      @media (max-width: theme("screens.xl")) {
+        & {
+          @apply border-0 w-full h-[1px] bg-gray-dark absolute left-0 top-24  block;
+        }
+      }
+    }
+  }
+  &_content {
+    @apply mt-28 ml-24;
+    .profilePage {
+      &_title {
+        @apply uppercase text-8xl mb-20;
+        @media (max-width: theme("screens.xl")) {
+          & {
+            @apply text-4xl mb-0;
+          }
+        }
+        &-divider {
+          @apply border-primary-dark;
+        }
+      }
+    }
+    .profileForm {
+      &_container {
+        @apply mt-20 flex flex-col gap-6;
+        @media (max-width: theme("screens.xl")) {
+          & {
+            @apply mt-8;
+          }
+        }
+        .profileForm {
+          &_title {
+            @apply text-2xl font-medium leading-none mb-4;
+            @media (max-width: theme("screens.xl")) {
+              & {
+                @apply mb-2 text-xl;
+              }
+            }
+          }
+
+          &_submit {
+            @extend .btn-primary;
+            @apply mb-20 mt-40 w-fit;
+            @media (max-width: theme("screens.xl")) {
+              & {
+                @apply w-full mb-16 mt-14;
+              }
+            }
+          }
+
+          &-divider {
+            @apply bg-gray-dark border-0 h-[1px] w-full absolute bottom-[216px] left-[172px];
+            @media (max-width: theme("screens.xl")) {
+              & {
+                @apply left-0 absolute bottom-32;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: theme("screens.xl")) {
+      & {
+        @apply mt-8 ml-0;
+      }
+    }
+  }
+}
+.profilePage_bottom-divider {
+  @apply w-full relative border-primary-dark bottom-0 left-0 mb-28;
+  @media (max-width: theme("screens.xl")) {
+    & {
+      @apply hidden;
+    }
+  }
+}
